@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="visual.css">
+    <script src="main.js"></script>
+    <title>Calculadora de gasolina</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img src="./img/logo.png" />
+    </header>
+
+    <main>
+        <article class="resumo">
+            <header>
+                <div>
+                    <h1>Boas vindas</h1>
+                    <p class="texto-destaque">Calcule aqui quanto de gasolina você precisa ter para cada percurso definido!</p>
+                </div>
+            </header>
+        </article>
+
+        <article class="formulario">
+            <header>
+                <h1>Preencha com os dados da sua viagem</h1>
+            </header>
+
+            <form>
+                <input type="number" id="distancia" placeholder="Distância em km"/>
+                <input type="number" id="consumo" placeholder="Consumo médio do veículo em km/L"/>
+                <input type="number" id="preco" placeholder="Preço médio do litro de gasolina"/>
+                <button type="button" onClick="calcularGasolina()">Calcular</button>
+            </form>
+        </article>
+
+        <section>
+            <p class="texto-destaque marcado-de-verde">Quantidade de gasolina necessária: <mark
+                id="resultado_gasolina_litros"></mark> litros</p>
+            <p class="texto-destaque marcado-de-verde">Custo da viagem: <mark
+                id="resultado_custo">R$ </mark></p>
+        </section>
+    </main>
+</body>
+
+</html>

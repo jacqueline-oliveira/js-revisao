@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="visual.css">
+    <script src="main.js"></script>
+    <title>Calculadora de notas</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img src="./img/logo.png" />
+    </header>
+
+    <main>
+        <article class="resumo">
+            <header>
+                <div>
+                    <h1>Boas vindas</h1>
+                    <p class="texto-destaque">Calcule aqui sua nota final com seus devidos pesos!</p>
+                </div>
+            </header>
+        </article>
+
+        <article class="formulario">
+            <header>
+                <h1>Preencha com suas notas em cada disciplina</h1>
+            </header>
+
+            <form>
+                <input type="number" id="linguagens" placeholder="Linguagens"/>
+                <input type="number" id="matematica" placeholder="Matemática"/>
+                <input type="number" id="humanas" placeholder="Ciências Humanas"/>
+                <input type="number" id="natureza" placeholder="Ciências da Natureza"/>
+                <input type="number" id="redacao" placeholder="Redação"/>
+                <button type="button" onClick="calcularNota()">Calcular</button>
+            </form>
+        </article>
+
+        <section>
+            <p class="texto-destaque marcado-de-verde">Seu total foi de <mark
+                id="resultado_nota"></mark> pontos</p>
+        </section>
+    </main>
+</body>
+
+</html>

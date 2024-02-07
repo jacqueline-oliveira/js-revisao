@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="visual.css">
+    <script src="main.js"></script>
+    <title>Calculadora de Salário Líquido</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img src="./img/logo.png" />
+    </header>
+
+    <main>
+        <article class="resumo">
+            <header>
+                <div>
+                    <h1>Boas vindas</h1>
+                    <p class="texto-destaque">Calcule aqui o seu salário líquido!</p>
+                </div>
+            </header>
+        </article>
+
+        <article class="formulario">
+            <header>
+                <h1>Preencha com seus dados</h1>
+            </header>
+
+            <form>
+                <input type="number" id="salario_bruto" placeholder="Salário Bruto"/>
+                <input type="number" id="dependentes" placeholder="Quantidade de dependentes"/>
+                <button type="button" onClick="calcularSalario()">Calcular</button>
+            </form>
+        </article>
+
+        <section>
+            <p class="texto-destaque marcado-de-verde">INSS: <mark
+                id="valor_inss">R$ </mark></p>
+            <p class="texto-destaque marcado-de-verde">Imposto de renda: <mark
+                id="imposto_renda">R$ </mark></p>
+            <p class="texto-destaque marcado-de-verde">E seu salário líquido será de <mark
+                id="resultado_salario_liquido">R$ </mark></p>
+        </section>
+    </main>
+</body>
+
+</html>
