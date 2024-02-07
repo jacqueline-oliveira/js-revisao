@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="visual.css">
+    <script src="main.js"></script>
+    <title>Buscar produtos</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img src="./img/logo.png" />
+    </header>
+
+    <main>
+        
+    <article class="resumo">
+        <header>
+            <div>
+                <h1>Boas vindas</h1>
+                <p class="texto-destaque">Vamos buscar os dados do seu CEP!</p>
+            </div>
+        </header>
+    </article>
+
+    <article class="formulario">
+        <div class="container col-md-5">
+            <form>
+              <div class="form-group font-weight-bold">
+                <label>CEP</label>
+                <input type="text" id="cep" pattern= "\d{5}-?\d{3}" class="form-control" required placeholder="Insira o seu CEP">
+              </div>
+              <div class="form-group font-weight-bold">
+                <label>Rua</label>
+                <input type="text" class="form-control" id="rua" placeholder="...">
+              </div>
+              <div class="form-group font-weight-bold">
+                <label>Complemento</label>
+                <input type="text" class="form-control" id="complemento" placeholder="...">
+              </div>
+              <div class="form-group font-weight-bold">
+                <label>Bairro</label>
+                <input type="text" class="form-control" id="bairro" placeholder="...">
+              </div>
+              <div class="form-group font-weight-bold">
+                <label>Cidade</label>
+                <input type="text" class="form-control" id="cidade" placeholder="...">
+              </div>
+              <div class="form-group font-weight-bold">
+                <label>Estado</label>
+                <input type="text" class="form-control" id="estado" placeholder="...">
+              </div>
+              <button type="button" onClick="buscarDados()">Buscar</button>
+              <button type="button" onClick="limparDados()">Limpar</button>
+            </form>
+        </div>
+    </article>
+    </main>
+</body>
+
+</html>
