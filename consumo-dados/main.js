@@ -1,3 +1,20 @@
+class Endereco{
+  constructor(logradouro, bairro, cidade, uf, cep){
+    this.logradouro = logradouro;
+    this.bairro = bairro;
+    this.cidade = cidade;
+    this.uf = uf;
+    this.cep = cep;
+  }
+
+  descrever(){
+    return `Rua ${this.logradouro}, bairro: ${this.bairro}
+    cidade: ${this.cidade} - ${this.uf} - ${this.cep}`;
+  }
+}
+
+let dadosEndereco = [];
+
 function buscarDados() {
   const cep = document.getElementById('cep').value;
   const url = `https://viacep.com.br/ws/${cep}/json/`;
@@ -7,6 +24,7 @@ function buscarDados() {
       return response.json()
     }).then(dados => {
       atribuirDados(dados);
+      //alert(JSON.stringify(dados));
     }); 
 }
 
@@ -22,6 +40,10 @@ function atribuirDados(dados) {
   bairro.value = dados.bairro;
   cidade.value = dados.localidade;
   estado.value = dados.uf;
+
+  let end = new Endereco(rua.value, bairro.value, cidade.value,
+     estado.value, dados.cep);
+  dadosEndereco.push(end);  
 }
 
 function limparDados() {
@@ -35,6 +57,13 @@ function limparDados() {
   bairro.value = "";
   cidade.value = "";
   estado.value = "";
+  
+  for(end of dadosEndereco){
+    alert(end.descrever());
+  }
+
+  const verCidades = (item) => alert("Cidade: " + item.cidade);
+  dadosEndereco.forEach(verCidades);
 }
 
 
