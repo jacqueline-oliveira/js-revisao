@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="visual.css">
+    <script src="main.js"></script>
+    <title>Buscador de filmes</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img src="./img/logo.png" />
+    </header>
+
+    <main>
+        <article class="resumo">
+            <header>
+                <div>
+                    <h1>Boas vindas</h1>
+                    <p class="texto-destaque">Busque aqui informações sobre seu filme ou série favoritos!</p>
+                </div>
+            </header>
+        </article>
+
+        <article class="formulario">
+            <header>
+                <h1>Preencha com os dados do filme</h1>
+            </header>
+
+            <form>
+                <input type="text" id="titulo" placeholder="Título do filme ou série que deseja buscar"/>
+                <button type="button" onClick="buscarDados()">Buscar</button>
+            </form>
+        </article>
+
+        <section>
+            <p class="texto-destaque marcado-de-verde">Dados do filme/série: <mark
+                id="resultado"></mark> </p>
+        </section>
+    </main>
+</body>
+
+</html>
