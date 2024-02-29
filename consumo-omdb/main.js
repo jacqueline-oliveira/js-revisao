@@ -32,6 +32,9 @@ function atribuirDados(dados){
 
   filmes.push(filme)  
   //alert(JSON.stringify(filme));  
-  alert(filme.descreveFilme());
+  //alert(filme.descreveFilme());
+
+  let resultado = document.getElementById('resultado');
+  resultado.innerHTML = filme.descreveFilme();
 
 }
